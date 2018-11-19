@@ -1,0 +1,20 @@
+<h1>Stupid Coaching</h1>
+<div class = "border">
+  <p><%= @question %></p>
+  <p><em>-You</em></p>
+</div>
+<br>
+<br>
+<div class = "border shade">
+<% if @question == "I am going to work" %>
+<p><%= "Great!" %></p>
+<% elsif @question[-1].include?("?") %>
+<p><%= "Silly question, get dressed and go to work!" %></p>
+<% else %>
+<p><%= "I don't care, get dressed and go to work!" %></p>
+<% end %>
+<p><em>-Your Coach</em></p>
+</div>
+<br>
+<br>
+<%= link_to 'Ask a new question', ask_path %>
